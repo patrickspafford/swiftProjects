@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment3a" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-I6-Adw">
+                                <rect key="frame" x="47" y="95" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e7d-gf-2xW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B66-NI-iA3"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obq-M6-F8S">
+                                <rect key="frame" x="37.5" y="438" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onSelectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufl-ll-PfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-ig-2kx">
+                                <rect key="frame" x="179.5" y="438" width="55" height="30"/>
+                                <state key="normal" title="Replace"/>
+                                <connections>
+                                    <action selector="onReplacePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dni-Jq-qKo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gio-AA-TtT">
+                                <rect key="frame" x="328.5" y="438" width="40" height="30"/>
+                                <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="onInsertPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4r5-Eq-NcR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHQ-fK-mx9">
+                                <rect key="frame" x="132" y="628" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aPW-AD-2f8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="obq-M6-F8S" firstAttribute="centerY" secondItem="PYe-ig-2kx" secondAttribute="centerY" id="2TA-8z-In5"/>
+                            <constraint firstItem="PYe-ig-2kx" firstAttribute="leading" secondItem="obq-M6-F8S" secondAttribute="trailing" constant="98" id="2TC-hx-nHg"/>
+                            <constraint firstItem="PYe-ig-2kx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8KB-z2-QpO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IHQ-fK-mx9" secondAttribute="bottom" constant="200" id="BOa-HQ-drR"/>
+                            <constraint firstItem="PYe-ig-2kx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PeI-2V-dX2"/>
+                            <constraint firstItem="Gio-AA-TtT" firstAttribute="centerY" secondItem="PYe-ig-2kx" secondAttribute="centerY" id="QNf-mS-1TM"/>
+                            <constraint firstItem="IHQ-fK-mx9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SHl-Pb-MTf"/>
+                            <constraint firstItem="Gio-AA-TtT" firstAttribute="leading" secondItem="PYe-ig-2kx" secondAttribute="trailing" constant="94" id="ebC-al-7no"/>
+                            <constraint firstItem="aRe-I6-Adw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="fem-gY-NzE"/>
+                            <constraint firstItem="aRe-I6-Adw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wqP-CS-UPZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="aRe-I6-Adw" id="kYY-LK-1Ln"/>
+                        <outlet property="textField" destination="IHQ-fK-mx9" id="DT1-4L-KlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
